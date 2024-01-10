@@ -133,7 +133,7 @@
     <option name="additionalArguments" value="--all-targets --release" />
     <option name="runOnTheFly" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.Test test">
+  <component name="RunManager" selected="Cargo.Test ALL">
     <configuration name="Expand comfy_bounded_ints::types::i8" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="expand --lib --color=always --theme=Dracula --tests types::i8" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -228,8 +228,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Cargo.Test test" />
         <item itemvalue="Cargo.Test ALL" />
+        <item itemvalue="Cargo.Test test" />
         <item itemvalue="Cargo.Test types::i8::test" />
         <item itemvalue="Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic" />
         <item itemvalue="Cargo.Expand comfy_bounded_ints::types::i8" />
