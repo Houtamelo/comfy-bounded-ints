@@ -1,8 +1,11 @@
 # Bounded-integer types focused on ergonomics and safety.
-The goal of this crate is to allow users to fearlessly use bounded integers without worrying about checking the operations performed on them. There is one exception: division by zero will still panic.
+The goal of this crate is to allow users to fearlessly use bounded integers without worrying about checking the operations performed on them.
+
+There is one exception: division by zero will still panic.
 
 ### Make sure to carefully read this README before using it.
-### Since all bounded types behave equaly, this README is the entire documentation.
+### Since all bounded types behave equally, this README is the entire documentation.
+
 
 - No unsafe code.
 - All operations are saturated, no overflow/underflow, no wrapping.
