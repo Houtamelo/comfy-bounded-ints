@@ -15,10 +15,14 @@ exclude = [".idea/*"]
 serde = { version = "1.0", features = ["derive"], optional = true }
 serde_json = { version = "1.0", optional = true }
 no-panic = { version = "0.1", optional = true }
+static_assertions = "1.1"
 
 [features]
 default = []
 serde = ["dep:serde"]
+serde_json = ["dep:serde_json"]
 div_assign_zero = []
 no_panic = ["dep:no-panic"]
-test = ["serde", "dep:serde_json", "div_assign_zero"]
+
+[dev-dependencies]
+comfy-bounded-ints = { path = ".", features = ["serde", "serde_json", "div_assign_zero"]}

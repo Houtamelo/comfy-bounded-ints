@@ -23,9 +23,13 @@ pub struct Bound_i32<const MIN: i32, const MAX: i32> {
 }
 
 impl<const MIN: i32, const MAX: i32> Bound_i32<MIN, MAX> {
+	const OK: () = assert!(MIN <= MAX, "MIN must be less than or equal to MAX");
+	
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
 	pub fn new(mut inner: i32) -> Self {
+		let _ = Self::OK; // this is not included in the binary
+		
 		if inner < MIN {
 			inner = MIN;
 		} else if inner > MAX {
@@ -61,9 +65,8 @@ impl<const MIN: i32, const MAX: i32> Bound_i32<MIN, MAX> {
 pub mod tests {
 	use crate::prelude::Bound_i32;
 	use crate::types::test_macros::new_set::{test_signed_new, test_signed_set};
-	use crate::types::test_macros::serde::test_signed_serde;
 
 	#[test] fn test_new() { test_signed_new!(Bound_i32); }
 	#[test] fn test_set() { test_signed_set!(Bound_i32); }
-	#[test] fn test_serde() { test_signed_serde!(Bound_i32); }
+	#[test] fn test_serde() { crate::types::test_macros::serde::test_signed_serde!(Bound_i32); }
 }

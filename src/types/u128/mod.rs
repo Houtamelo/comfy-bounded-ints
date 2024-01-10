@@ -23,9 +23,13 @@ pub struct Bound_u128<const MIN: u128, const MAX: u128> {
 }
 
 impl<const MIN: u128, const MAX: u128> Bound_u128<MIN, MAX> {
+	const OK: () = assert!(MIN <= MAX, "MIN must be less than or equal to MAX");
+	
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
 	pub fn new(mut inner: u128) -> Self {
+		let _ = Self::OK; // this is not included in the binary
+		
 		if inner < MIN {
 			inner = MIN;
 		} else if inner > MAX {
@@ -61,9 +65,8 @@ impl<const MIN: u128, const MAX: u128> Bound_u128<MIN, MAX> {
 pub mod tests {
 	use crate::prelude::Bound_u128;
 	use crate::types::test_macros::new_set::{test_unsigned_new, test_unsigned_set};
-	use crate::types::test_macros::serde::test_unsigned_serde;
 
 	#[test] fn test_new() { test_unsigned_new!(Bound_u128); }
 	#[test] fn test_set() { test_unsigned_set!(Bound_u128); }
-	#[test] fn test_serde() { test_unsigned_serde!(Bound_u128); }
+	#[test] fn test_serde() { crate::types::test_macros::serde::test_unsigned_serde!(Bound_u128); }
 }

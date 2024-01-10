@@ -18,304 +18,27 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/comfy-bounded-ints.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-11080-5223996872294123009_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-11308-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-12424-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-14016-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-15052-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-1532-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-16072-5223996872294123009_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-16388-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-17932-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-20492-5223996872294123009_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-22032-5224244262410372609_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-23248-9655162457135836138_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-24304-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-25424-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-25456-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-26280-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-27392-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-27544-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-27600-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-28504-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-7980-5223996872294123009_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_i128.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_i16.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_i32.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_i64.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_isize.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_u128.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_u16.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_u32.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_u64.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pad_to/pad_usize.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_i128.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_i16.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_i32.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_i64.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_i8.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_isize.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_u128.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_u16.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_u32.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_u64.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_u8.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/squeeze_to/squeeze_usize.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i128/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i16/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i32/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i64/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/i8/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_32/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/if_64/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/isize/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/add.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/div.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/mul.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/new_set.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/rem.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/serde.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/sub.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/test_macros/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/add_assign_pad.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/div_assign_zero/div_assign_pad.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/div_assign_zero/rem_assign_pad.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/mul_assign_pad.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/sub_assign_pad.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u128/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u16/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u32/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u64/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/sub_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/u8/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/add_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/default.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/deref.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/div_assign_non_zero.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/from.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_32/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/add_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/div_assign_zero/div_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/div_assign_zero/div_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/div_assign_zero/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/div_assign_zero/rem_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/div_assign_zero/rem_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/mul_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/if_64/sub_assign_squeeze.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/mod.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/mul_assign_self.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/partial_eq.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types/usize/sub_assign_self.rs" afterDir="false" />
+    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Initial commit">
+      <change afterPath="$PROJECT_DIR$/grcov-17480-689640395087270012_0.profraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grcov-30332-689640395087270012_0.profraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grcov-32600-689640395087270012_0.profraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grcov-34088-9227811502571843546_0.profraw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i128/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i128/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i16/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i16/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i32/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i32/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i64/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i64/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i8/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i8/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/isize/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/isize/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u128/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u128/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u16/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u16/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u32/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u32/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u64/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u64/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u8/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u8/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/usize/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/usize/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -372,9 +95,11 @@
     "Cargo.Test squeeze_to.executor": "Coverage",
     "Cargo.Test squeeze_to::gen_i128::tests::test_squeeze_to_i128.executor": "Run",
     "Cargo.Test sub_assign_pad::tests.executor": "Run",
+    "Cargo.Test test.executor": "Run",
     "Cargo.Test types::i128::add_assign_self::test_add_assign.executor": "Run",
     "Cargo.Test types::i128::add_assign_self::tests::test.executor": "Run",
     "Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic.executor": "Run",
+    "Cargo.Test types::i8::test.executor": "Run",
     "Cargo.Test types::i8::tests::test_serde.executor": "Run",
     "Cargo.Test types::u128::sub_assign_pad::tests::test_i128.executor": "Run",
     "Cargo.Test types::u128::sub_assign_pad::tests::test_i16.executor": "Run",
@@ -408,7 +133,7 @@
     <option name="additionalArguments" value="--all-targets --release" />
     <option name="runOnTheFly" value="true" />
   </component>
-  <component name="RunManager" selected="Cargo.Test ALL">
+  <component name="RunManager" selected="Cargo.Test test">
     <configuration name="Expand comfy_bounded_ints::types::i8" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="expand --lib --color=always --theme=Dracula --tests types::i8" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
@@ -427,7 +152,24 @@
       </method>
     </configuration>
     <configuration name="Test ALL" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package comfy-bounded-ints -F test" />
+      <option name="command" value="test --package comfy-bounded-ints" />
+      <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <option name="emulateTerminal" value="true" />
+      <option name="channel" value="DEFAULT" />
+      <option name="requiredFeatures" value="true" />
+      <option name="allFeatures" value="false" />
+      <option name="withSudo" value="false" />
+      <option name="buildTarget" value="REMOTE" />
+      <option name="backtrace" value="SHORT" />
+      <envs />
+      <option name="isRedirectInput" value="false" />
+      <option name="redirectInputPath" value="" />
+      <method v="2">
+        <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package comfy-bounded-ints --lib test -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
@@ -460,8 +202,8 @@
         <option name="CARGO.BUILD_TASK_PROVIDER" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test types::i8::tests::test_serde" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
-      <option name="command" value="test --package comfy-bounded-ints --lib types::i8::tests::test_serde -- --exact" />
+    <configuration name="Test types::i8::test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
+      <option name="command" value="test --package comfy-bounded-ints --lib types::i8::test -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
@@ -478,17 +220,19 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Cargo.Test test" />
+      <item itemvalue="Cargo.Test types::i8::test" />
       <item itemvalue="Cargo.Expand comfy_bounded_ints::types::i8" />
       <item itemvalue="Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic" />
-      <item itemvalue="Cargo.Test types::i8::tests::test_serde" />
       <item itemvalue="Cargo.Test ALL" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Cargo.Test test" />
         <item itemvalue="Cargo.Test ALL" />
+        <item itemvalue="Cargo.Test types::i8::test" />
         <item itemvalue="Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic" />
         <item itemvalue="Cargo.Expand comfy_bounded_ints::types::i8" />
-        <item itemvalue="Cargo.Test types::i8::tests::test_serde" />
       </list>
     </recent_temporary>
   </component>
@@ -509,8 +253,10 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Initial commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial commit" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test squeeze_to Coverage Results" MODIFIED="1704840444648" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
+    <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test ALL Coverage Results" MODIFIED="1704852975078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
   </component>
 </project>
