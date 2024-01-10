@@ -1,8 +1,8 @@
-### Bounded-integer types focused on ergonomics and safety.
+# Bounded-integer types focused on ergonomics and safety.
 The goal of this crate is to allow users to fearlessly use bounded integers without worrying about checking the operations performed on them. There is one exception: division by zero will still panic.
 
-# Make sure to read this README carefully before using it.
-# This file is the entire documentation.
+### Make sure to carefully read this README before using it.
+### Since all bounded types behave equaly, this README is the entire documentation.
 
 - No unsafe code.
 - All operations are saturated, no overflow/underflow, no wrapping.
@@ -13,7 +13,7 @@ The goal of this crate is to allow users to fearlessly use bounded integers with
 
 ---
 
-### Features
+## Features
 All features are disabled by default.
 
 - `div_assign_zero`: Enables unchecked division by zero. Division by non-zero types (NonZeroI8, ...) is allowed.
@@ -22,7 +22,7 @@ All features are disabled by default.
 
 ---
 
-### Quirks
+# Quirks
 
 ## All rust signed/unsigned types are supported: i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize
 
