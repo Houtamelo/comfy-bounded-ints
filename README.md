@@ -16,7 +16,7 @@ The goal of this crate is to allow users to fearlessly use bounded integers with
 ## Features
 All features are disabled by default.
 
-- `div_assign_zero`: Enables unchecked division by zero. Division by non-zero types (NonZeroI8, ...) is allowed.
+- `div_assign_zero`: Enables unchecked division by zero. (Division by non-zero types (NonZeroI8, ...) is provided without this feature).
 - `serde`: Enables serde Serialization/Deserialization support, all bounded types are serialized transparently as their inner value. 
   Example: `assert_eq!(serde_json::to_string(&Bound_i8::<0, 10>::new(5)).unwrap(), serde_json::to_string(&5_i8).unwrap())`.
 
