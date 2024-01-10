@@ -35,6 +35,7 @@ use comfy_bounded_ints::{
 
 ## Constraints are enforced at compile-time, you specify them using const params
 Use the `new` function to create a new bounded type.
+`cargo build` will not compile if MIN > MAX
 
 ```rs
 use comfy_bounded_ints::Bound_i16;
