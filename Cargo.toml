@@ -1,0 +1,24 @@
+[package]
+name = "comfy-bounded-ints"
+authors = ["Houtamelo"]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "Bounded-integer types focused on ergonomics and safety. (See README.md)"
+repository = "https://github.com/Houtamelo/comfy-bounded-ints"
+readme = "README.md"
+keywords = ["bound", "bounded", "integer", "int", "saturating"]
+categories = ["data-structures", "rust-patterns", "game-development", "mathematics"]
+exclude = [".idea/*"]
+
+[dependencies]
+serde = { version = "1.0", features = ["derive"], optional = true }
+serde_json = { version = "1.0", optional = true }
+no-panic = { version = "0.1", optional = true }
+
+[features]
+default = []
+serde = ["dep:serde"]
+div_assign_zero = []
+no_panic = ["dep:no-panic"]
+test = ["serde", "dep:serde_json", "div_assign_zero"]
