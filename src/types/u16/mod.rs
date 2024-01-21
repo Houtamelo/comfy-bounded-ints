@@ -27,7 +27,7 @@ impl<const MIN: u16, const MAX: u16> Bound_u16<MIN, MAX> {
 	
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	pub fn new(mut inner: u16) -> Self {
+	pub const fn new(mut inner: u16) -> Self {
 		let _ = Self::OK; // this is not included in the binary
 		
 		if inner < MIN {
@@ -41,7 +41,7 @@ impl<const MIN: u16, const MAX: u16> Bound_u16<MIN, MAX> {
 
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	pub fn get(&self) -> u16 {
+	pub const fn get(&self) -> u16 {
 		return self.inner;
 	}
 
@@ -57,14 +57,15 @@ impl<const MIN: u16, const MAX: u16> Bound_u16<MIN, MAX> {
 		self.inner = inner;
 	}
 
-	pub fn bound_lower() -> u16 { MIN }
-	pub fn bound_upper() -> u16 { MAX }
+	pub const fn bound_lower() -> u16 { MIN }
+	pub const fn bound_upper() -> u16 { MAX }
 }
 
 #[cfg(test)]
 pub mod tests {
 	use crate::prelude::Bound_u16;
 	use crate::types::test_macros::new_set::{test_unsigned_new, test_unsigned_set};
+
 	#[test] fn test_new() { test_unsigned_new!(Bound_u16); }
 	#[test] fn test_set() { test_unsigned_set!(Bound_u16); }
 	#[test] fn test_serde() { crate::types::test_macros::serde::test_unsigned_serde!(Bound_u16); }

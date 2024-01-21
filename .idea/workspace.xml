@@ -18,8 +18,26 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Removed static-assertions dependency">
+    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Bumped version due to README update">
+      <change afterPath="$PROJECT_DIR$/grcov-16532-689640395087270012_0.profraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grcov-24496-689640395087270012_0.profraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grcov-25996-17538973000307815377_0.profraw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/grcov-27068-689640395087270012_0.profraw" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i128/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i128/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i16/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i16/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i32/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i32/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i64/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i64/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/i8/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i8/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/isize/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/isize/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u128/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u128/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u16/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u16/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u32/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u32/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u64/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u64/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/u8/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u8/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types/usize/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/usize/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,38 +85,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Cargo.Expand comfy_bounded_ints::types::i8.executor": "Run",
-    "Cargo.Test ALL.executor": "Coverage",
-    "Cargo.Test squeeze_to.executor": "Coverage",
-    "Cargo.Test squeeze_to::gen_i128::tests::test_squeeze_to_i128.executor": "Run",
-    "Cargo.Test sub_assign_pad::tests.executor": "Run",
-    "Cargo.Test test.executor": "Run",
-    "Cargo.Test types::i128::add_assign_self::test_add_assign.executor": "Run",
-    "Cargo.Test types::i128::add_assign_self::tests::test.executor": "Run",
-    "Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic.executor": "Run",
-    "Cargo.Test types::i8::test.executor": "Run",
-    "Cargo.Test types::i8::tests::test_serde.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i128.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i16.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i32.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i64.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i8.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/anton/Documents/Personal Projects/comfy-bounded-ints",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "advanced.settings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Cargo.Expand comfy_bounded_ints::types::i8.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test ALL.executor&quot;: &quot;Coverage&quot;,
+    &quot;Cargo.Test squeeze_to.executor&quot;: &quot;Coverage&quot;,
+    &quot;Cargo.Test squeeze_to::gen_i128::tests::test_squeeze_to_i128.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test sub_assign_pad::tests.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i128::add_assign_self::test_add_assign.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i128::add_assign_self::tests::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i8::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i8::tests::test_serde.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i128.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i16.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i32.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i64.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i8.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/anton/Documents/Personal Projects/comfy-bounded-ints&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;advanced.settings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
@@ -118,6 +136,7 @@
     <configuration name="Expand comfy_bounded_ints::types::i8" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="expand --lib --color=always --theme=Dracula --tests types::i8" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -125,7 +144,6 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -135,6 +153,7 @@
     <configuration name="Test ALL" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package comfy-bounded-ints" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -142,7 +161,6 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -152,6 +170,7 @@
     <configuration name="Test test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package comfy-bounded-ints --lib test -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -159,7 +178,6 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -169,6 +187,7 @@
     <configuration name="Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package comfy-bounded-ints --lib types::i8::div_assign_zero::div_assign_self::test_div_assign_panic -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -176,7 +195,6 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -186,6 +204,7 @@
     <configuration name="Test types::i8::test" type="CargoCommandRunConfiguration" factoryName="Cargo Command" temporary="true">
       <option name="command" value="test --package comfy-bounded-ints --lib types::i8::test -- --exact" />
       <option name="workingDirectory" value="file://$PROJECT_DIR$" />
+      <envs />
       <option name="emulateTerminal" value="true" />
       <option name="channel" value="DEFAULT" />
       <option name="requiredFeatures" value="true" />
@@ -193,7 +212,6 @@
       <option name="withSudo" value="false" />
       <option name="buildTarget" value="REMOTE" />
       <option name="backtrace" value="SHORT" />
-      <envs />
       <option name="isRedirectInput" value="false" />
       <option name="redirectInputPath" value="" />
       <method v="2">
@@ -201,11 +219,11 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Cargo.Test test" />
-      <item itemvalue="Cargo.Test types::i8::test" />
       <item itemvalue="Cargo.Expand comfy_bounded_ints::types::i8" />
-      <item itemvalue="Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic" />
       <item itemvalue="Cargo.Test ALL" />
+      <item itemvalue="Cargo.Test test" />
+      <item itemvalue="Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic" />
+      <item itemvalue="Cargo.Test types::i8::test" />
     </list>
     <recent_temporary>
       <list>
@@ -237,9 +255,11 @@
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added compilation fail if MIN &gt; MAX" />
     <MESSAGE value="Removed static-assertions dependency" />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed static-assertions dependency" />
+    <MESSAGE value="Bumped version due to README update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bumped version due to README update" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test ALL Coverage Results" MODIFIED="1704853407960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
+    <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_ALL.info" NAME="Test ALL Coverage Results" MODIFIED="1705852154230" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
   </component>
 </project>

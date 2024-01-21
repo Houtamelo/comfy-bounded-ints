@@ -25,7 +25,7 @@ impl<const MIN: isize, const MAX: isize> Bound_isize<MIN, MAX> {
 	
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	pub fn new(mut inner: isize) -> Self {
+	pub const fn new(mut inner: isize) -> Self {
 		let _ = Self::OK; // this is not included in the binary
 		
 		if inner < MIN {
@@ -39,7 +39,7 @@ impl<const MIN: isize, const MAX: isize> Bound_isize<MIN, MAX> {
 
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	pub fn get(&self) -> isize {
+	pub const fn get(&self) -> isize {
 		return self.inner;
 	}
 
@@ -55,8 +55,8 @@ impl<const MIN: isize, const MAX: isize> Bound_isize<MIN, MAX> {
 		self.inner = inner;
 	}
 
-	pub fn bound_lower() -> isize { MIN }
-	pub fn bound_upper() -> isize { MAX }
+	pub const fn bound_lower() -> isize { MIN }
+	pub const fn bound_upper() -> isize { MAX }
 }
 
 #[cfg(test)]

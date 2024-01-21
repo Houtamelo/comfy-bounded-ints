@@ -27,7 +27,7 @@ impl<const MIN: i8, const MAX: i8> Bound_i8<MIN, MAX> {
 	
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	pub fn new(mut inner: i8) -> Self {
+	pub const fn new(mut inner: i8) -> Self {
 		let _ = Self::OK; // this is not included in the binary
 		
 		if inner < MIN {
@@ -41,7 +41,7 @@ impl<const MIN: i8, const MAX: i8> Bound_i8<MIN, MAX> {
 
 	#[inline(always)]
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	pub fn get(&self) -> i8 {
+	pub const fn get(&self) -> i8 {
 		return self.inner;
 	}
 
@@ -58,10 +58,10 @@ impl<const MIN: i8, const MAX: i8> Bound_i8<MIN, MAX> {
 	}
 	
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	#[inline(always)] pub fn bound_lower() -> i8 { MIN }
+	#[inline(always)] pub const fn bound_lower() -> i8 { MIN }
 
 	#[cfg_attr(feature = "no_panic", no_panic::no_panic)]
-	#[inline(always)] pub fn bound_upper() -> i8 { MAX }
+	#[inline(always)] pub const fn bound_upper() -> i8 { MAX }
 }
 
 #[cfg(test)]
