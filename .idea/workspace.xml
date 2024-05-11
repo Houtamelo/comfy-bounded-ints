@@ -18,26 +18,8 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Bumped version due to README update">
-      <change afterPath="$PROJECT_DIR$/grcov-16532-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-24496-689640395087270012_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-25996-17538973000307815377_0.profraw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/grcov-27068-689640395087270012_0.profraw" afterDir="false" />
+    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.2.0: Added const to methods `new`, `get`, `bound_lower` and `bound_upper` of all bounded types.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/i128/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i128/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/i16/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i16/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/i32/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i32/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/i64/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i64/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/i8/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/i8/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/isize/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/isize/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/u128/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u128/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/u16/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u16/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/u32/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u32/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/u64/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u64/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/u8/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/u8/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/usize/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/types/usize/mod.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -256,7 +238,8 @@
     <MESSAGE value="Added compilation fail if MIN &gt; MAX" />
     <MESSAGE value="Removed static-assertions dependency" />
     <MESSAGE value="Bumped version due to README update" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bumped version due to README update" />
+    <MESSAGE value="Version 0.2.0: Added const to methods `new`, `get`, `bound_lower` and `bound_upper` of all bounded types." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.2.0: Added const to methods `new`, `get`, `bound_lower` and `bound_upper` of all bounded types." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test ALL Coverage Results" MODIFIED="1704853407960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
