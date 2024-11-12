@@ -1,7 +1,7 @@
 [package]
 name = "comfy-bounded-ints"
 authors = ["Houtamelo"]
-version = "0.2.1"
+version = "0.3.0"
 edition = "2021"
 license = "MIT"
 description = "Bounded-integer types focused on ergonomics and safety. (See README.md)"
@@ -14,14 +14,11 @@ exclude = [".idea/*"]
 [dependencies]
 serde = { version = "1.0.201", features = ["derive"], optional = true }
 serde_json = { version = "1.0.117", optional = true }
-no-panic = { version = "0.1.30", optional = true }
 
 [features]
 default = []
 serde = ["dep:serde"]
 serde_json = ["dep:serde_json"]
-div_assign_zero = []
-no_panic = ["dep:no-panic"]
 
 [dev-dependencies]
-comfy-bounded-ints = { path = ".", features = ["serde", "serde_json", "div_assign_zero"]}
+comfy-bounded-ints = { path = ".", features = ["serde", "serde_json"] }
