@@ -5,45 +5,51 @@ macro_rules! impl_cmp {
 	    $Int: ty [ $N: ty ]
 		$( [$($gen:tt)*] )?
     ) => {
-	    #[allow(unused_imports)]
-	    use std::cmp::*;
-	    #[allow(unused_imports)]
-	    use $crate::prelude::*;
-	    
-	    impl<T, $( $($gen)* )?> PartialEq<T> for $Int 
-			where for<'a> &'a T: SqueezeInto<$N>
+	    impl<T, $( $($gen)* )?> std::cmp::PartialEq<T> for $Int
+				where $N: $crate::prelude::EncapsulatesBoth<T, Out: std::cmp::PartialEq + for<'a> $crate::prelude::CramFrom<&'a T> + $crate::prelude::CramFrom<$N>>,
 		{
 			#[inline(always)]
 			fn eq(&self, other: &T) -> bool {
-				self.get() == other.squeeze_into()
+				use $crate::prelude::{EncapsulatesBoth, CramFrom};
+				let out_a = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<$N>>::cram_from(self.get());
+				let out_b = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<&T>>::cram_from(other);
+				out_a.eq(&out_b)
 			}
 		}
-		
-		impl<T, $( $($gen)* )?> PartialEq<$Int> for T
-			where for<'a> &'a T: SqueezeInto<$N>
+
+	    impl<T, $( $($gen)* )?> std::cmp::PartialEq<$Int> for T
+				where $N: $crate::prelude::EncapsulatesBoth<T, Out: std::cmp::PartialEq + for<'a> $crate::prelude::CramFrom<&'a T> + $crate::prelude::CramFrom<$N>>,
 		{
 			#[inline(always)]
 			fn eq(&self, other: &$Int) -> bool {
-				self.squeeze_into() == other.get()
+				use $crate::prelude::{EncapsulatesBoth, CramFrom};
+				let out_a = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<$N>>::cram_from(other.get());
+				let out_b = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<&T>>::cram_from(self);
+				out_a.eq(&out_b)
 			}
 		}
-	    
-	    impl<T, $( $($gen)* )?> PartialOrd<T> for $Int 
-			where for<'a> &'a T: SqueezeInto<$N>,
-	                    $Int: PartialEq<T>,
+
+	    impl<T, $( $($gen)* )?> std::cmp::PartialOrd<T> for $Int
+			where $N: $crate::prelude::EncapsulatesBoth<T, Out: std::cmp::PartialOrd + for<'a> $crate::prelude::CramFrom<&'a T> + $crate::prelude::CramFrom<$N>>,
 		{
 			#[inline(always)]
-			fn partial_cmp(&self, other: &T) -> Option<Ordering> {
-				self.get().partial_cmp(&other.squeeze_into())
+			fn partial_cmp(&self, other: &T) -> Option<std::cmp::Ordering> {
+				use $crate::prelude::{EncapsulatesBoth, CramFrom};
+				let out_a = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<$N>>::cram_from(self.get());
+				let out_b = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<&T>>::cram_from(other);
+				out_a.partial_cmp(&out_b)
 			}
 		}
-		
-		impl<T, $( $($gen)* )?> PartialOrd<$Int> for T
-			where for<'a> &'a T: SqueezeInto<$N>
+
+		impl<T, $( $($gen)* )?> std::cmp::PartialOrd<$Int> for T
+			where $N: $crate::prelude::EncapsulatesBoth<T, Out: std::cmp::PartialOrd + for<'a> $crate::prelude::CramFrom<&'a T> + $crate::prelude::CramFrom<$N>>,
 		{
 			#[inline(always)]
-			fn partial_cmp(&self, other: &$Int) -> Option<Ordering> {
-				self.squeeze_into().partial_cmp(&other.get())
+			fn partial_cmp(&self, other: &$Int) -> Option<std::cmp::Ordering> {
+				use $crate::prelude::{EncapsulatesBoth, CramFrom};
+				let out_a = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<$N>>::cram_from(other.get());
+				let out_b = <<$N as EncapsulatesBoth<T>>::Out as CramFrom<&T>>::cram_from(self);
+				out_b.partial_cmp(&out_a)
 			}
 		}
     };

@@ -6,20 +6,17 @@ macro_rules! impl_conversions {
 	    [ $N: ty ]
 	    $( [$($gen:tt)*] )?
     ) => {
-		#[allow(unused_imports)]
-		use $crate::prelude::*;
-		
-		impl<T: SqueezeFrom<$N>, $( $($gen)* )?> From<$Int> for T {
+		impl<T: $crate::prelude::CramFrom<$N>, $( $($gen)* )?> From<$Int> for T {
 			#[inline(always)]
 			fn from(value: $Int) -> Self {
-				Self::squeeze_from(value.get())
+				Self::cram_from(value.get())
 			}
 		}
 		
-		impl<T: SqueezeInto<$N>, $( $($gen)* )?> From<T> for $Int {
+		impl<T: $crate::prelude::CramInto<$N>, $( $($gen)* )?> From<T> for $Int {
 			#[inline(always)]
 			fn from(value: T) -> Self {
-				Self::new(value.squeeze_into())
+				Self::new(value.cram_into())
 			}
 		}
 	};
@@ -59,4 +56,19 @@ macro_rules! impl_deref {
 			}
 		}
 	}
+}
+
+#[doc(hidden)]
+#[macro_export]
+macro_rules! impl_display {
+    (
+	    $Int: ty [ $N: ty ]
+		$( [$($gen:tt)*] )?
+    ) => {
+	    impl<$( $($gen)* )?> std::fmt::Display for $Int {
+		    fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
+			    <$N as std::fmt::Display>::fmt(&self.get(), f)
+		    }
+	    }
+    };
 }

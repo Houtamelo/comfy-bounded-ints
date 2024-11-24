@@ -6,8 +6,8 @@ new_generic_bound_signed!(Int<MIN, MAX32>(i32));
 fn test() {
 	#[allow(unused)]
 	let mut int = Int::<0, 255>::new(5);
-
-	macro_rules! run_tests {
+	
+	macro_rules! test_primitives {
 		($($T: ty),* $(,)?) => {
 		    $(
 		        // Conversions -----------------------------------------------
@@ -17,91 +17,92 @@ fn test() {
 		        let other_int: Int<0, 255> = primitive.into();
 		        assert_eq!(other_int.get(), int.get());
 		    
-		        // Arithmetic ------------------------------------------------
-		        run_tests!(@BIN [+] [<$T>::squeeze_from(10)] == 15, 15);
-		        run_tests!(@BIN [-] [<$T>::squeeze_from(2)] == 3);
-		        run_tests!(@BIN [*] [<$T>::squeeze_from(4)] == 20, 20);
-		        run_tests!(@BIN [/] [<$T>::squeeze_from(2)] == 2, 0);
-		        run_tests!(@BIN [/] [<$T>::squeeze_from(10)] == 0, 2);
-		        run_tests!(@BIN [%] [<$T>::squeeze_from(5)] == 0, 0);
-		        run_tests!(@BIN [%] [<$T>::squeeze_from(3)] == 2, 3);
-		    
 		        // Assignment ------------------------------------------------
-		        run_tests!(@ASG [+=] [<$T>::squeeze_from(20)] == 25);
-		        run_tests!(@ASG [-=] [<$T>::squeeze_from(6)] == 0);
-		        run_tests!(@ASG [*=] [<$T>::squeeze_from(1)] == 5);
-		        run_tests!(@ASG [/=] [<$T>::squeeze_from(2)] == 2);
-		        run_tests!(@ASG [%=] [<$T>::squeeze_from(2)] == 1);
+		        test_primitives!(@ASG $T [+=] [20] == 25);
+		        test_primitives!(@ASG $T [-=] [6] == 0);
+		        test_primitives!(@ASG $T [*=] [1] == 5);
+		        test_primitives!(@ASG $T [/=] [2] == 2);
+		        test_primitives!(@ASG $T [%=] [2] == 1);
 		    
 		        // Comparison ------------------------------------------------
-		        run_tests!(@CMP [<$T>::squeeze_from(5)] ==, ==);
-		        run_tests!(@CMP [<$T>::squeeze_from(2)] !=, !=);
-		        run_tests!(@CMP [<$T>::squeeze_from(3)] >, <);
-		        run_tests!(@CMP [<$T>::squeeze_from(5)] >=, <=);
-		        run_tests!(@CMP [<$T>::squeeze_from(2)] >=, <);
-		        run_tests!(@CMP [<$T>::squeeze_from(8)] <, >=);
-		        run_tests!(@CMP [<$T>::squeeze_from(6)] <=, >);
-		        run_tests!(@CMP [<$T>::squeeze_from(5)] <=, >=);
+		        test_primitives!(@CMP $T [5] ==, ==);
+		        test_primitives!(@CMP $T [2] !=, !=);
+		        test_primitives!(@CMP $T [3] >, <);
+		        test_primitives!(@CMP $T [5] >=, <=);
+		        test_primitives!(@CMP $T [2] >=, <);
+		        test_primitives!(@CMP $T [8] <, >=);
+		        test_primitives!(@CMP $T [6] <=, >);
+		        test_primitives!(@CMP $T [5] <=, >=);
 		    )*
 	    };
 		
-		(@BIN [$Op: tt] [$Val: expr] == $Expect: expr $(, $Inverse: expr)? ) => {
-			let result = int $Op $Val;
+		(@BIN $T: ty [$Op: tt] [$Val: expr] == $Expect: expr $(, $Inverse: expr)? ) => {
+			let val = <$T>::cram_from($Val);
+			
+			let result = int $Op val.clone();
 			assert_eq!(result, $Expect);
 			
-			let result = int $Op &$Val;
+			let result = int $Op &val.clone();
 			assert_eq!(result, $Expect);
 			
-			let result = int $Op &mut $Val;
+			let result = int $Op &mut val.clone();
 			assert_eq!(result, $Expect);
 			
 			$(
-				let result = $Val $Op int;
+				let result = val.clone() $Op int;
 				assert_eq!(result, $Inverse);
 			
-				let result = $Val $Op &int;
+				let result = val.clone() $Op &int;
 				assert_eq!(result, $Inverse);
 			
-				let result = $Val $Op &mut int;
+				let result = val.clone() $Op &mut int;
 				assert_eq!(result, $Inverse);
 			)?
 		};
 		
-		(@ASG [$Op: tt] [$Val: expr] == $Expect: expr $(, $Inverse: expr)? ) => {
-			let mut result = int;
-			result $Op $Val;
-			assert_eq!(result.get(), $Expect);
+		(@ASG $T: ty [$Op: tt] [$Val: expr] == $Expect: expr $(, $Inverse: expr)? ) => {
+			let val = <$T>::cram_from($Val);
 			
 			let mut result = int;
-			result $Op &$Val;
-			assert_eq!(result.get(), $Expect);
+			result $Op val.clone();
+			assert_eq!(result.cram::<$T>(), $Expect);
 			
 			let mut result = int;
-			result $Op &mut $Val;
-			assert_eq!(result.get(), $Expect);
+			result $Op &val.clone();
+			assert_eq!(result.cram::<$T>(), $Expect);
+			
+			let mut result = int;
+			result $Op &mut val.clone();
+			assert_eq!(result.cram::<$T>(), $Expect);
 			
 			$(
-				let mut result = $Val;
+				let mut result = val.clone();
 				result $Op int;
 				assert_eq!(result, $Inverse);
 			
-				let mut result = $Val;
+				let mut result = val.clone();
 				result $Op &int;
 				assert_eq!(result, $Inverse);
 			
-				let mut result = $Val;
+				let mut result = val.clone();
 				result $Op &mut int;
 				assert_eq!(result, $Inverse);
 			)?
 		};
 		
-		(@CMP [$Val: expr] $Op: tt, $Inv: tt) => {
-			assert!(int $Op $Val);
-			assert!($Val $Inv int);
+		(@CMP $T: ty [$Val: expr] $Op: tt, $Inv: tt) => {
+			let val = <$T>::cram_from($Val);
+			
+			assert!(int $Op val.clone());
+			
+			if !(val.clone() $Inv int) {
+				panic!("Assertion failed, values: {} {} {}", val.clone(), stringify!($Inv), int);
+			}
 		};
 	}
+	
 
-	run_tests!(
+	test_primitives!(
 		i8, i16, i32, i64, i128, isize, 
 		u8, u16, u32, u64, u128, usize,
 	);

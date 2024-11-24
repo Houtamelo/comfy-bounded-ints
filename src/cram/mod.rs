@@ -1,51 +1,45 @@
 use macros::*;
-
 mod macros;
 
 #[doc(hidden)]
-pub trait SqueezeInto<T> {
+pub trait CramInto<T> {
 	#[doc(hidden)]
-	fn squeeze_into(self) -> T;
+	fn cram_into(self) -> T;
 }
 
-impl<A: Clone + SqueezeInto<B>, B> SqueezeInto<B> for &A {
+impl<A: Clone + CramInto<B>, B> CramInto<B> for &A {
 	#[inline(always)]
-	fn squeeze_into(self) -> B {
-		self.clone().squeeze_into()
-	}
+	fn cram_into(self) -> B { self.clone().cram_into() }
 }
 
-impl<A: Clone + SqueezeInto<B>, B> SqueezeInto<B> for &mut A {
+impl<A: Clone + CramInto<B>, B> CramInto<B> for &mut A {
 	#[inline(always)]
-	fn squeeze_into(self) -> B {
-		self.clone().squeeze_into()
-	}
+	fn cram_into(self) -> B { self.clone().cram_into() }
 }
 
-pub trait Squeeze: Sized {
+pub trait Cram: Sized {
 	#[inline(always)]
-	fn squeeze<T>(self) -> T
-		where Self: SqueezeInto<T>
-	{
-		self.squeeze_into()
+	fn cram<T>(self) -> T
+	where Self: CramInto<T> {
+		self.cram_into()
 	}
 }
 
 #[doc(hidden)]
-pub trait SqueezeFrom<T> {
-	fn squeeze_from(value: T) -> Self;
+pub trait CramFrom<T> {
+	fn cram_from(value: T) -> Self;
 }
 
-impl<A, B> SqueezeFrom<B> for A
-	where B: SqueezeInto<A>
+impl<A, B> CramFrom<B> for A
+where B: CramInto<A>
 {
 	#[inline(always)]
-	fn squeeze_from(value: B) -> Self {
-		value.squeeze_into()
-	}
+	fn cram_from(value: B) -> Self { value.cram_into() }
 }
 
-impl_squeeze!(i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize);
+impl_cram!(
+	i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize
+);
 
 signed_to_signed!(i8 <<< [i8, i16, i32, i64, i128, isize]);
 signed_to_signed!([i8] <<< i16 <<< [i16, i32, i64, i128, isize]);
@@ -74,7 +68,7 @@ mod ptr_32 {
 
 	signed_to_signed!([isize] <<< i64);
 	signed_to_unsigned!([usize] <<< i64);
-	
+
 	signed_to_signed!(isize <<< [i32]);
 	signed_to_unsigned!(isize <<< [u32]);
 
@@ -89,7 +83,7 @@ mod ptr_64 {
 
 	signed_to_signed!(i64 <<< [isize]);
 	signed_to_unsigned!(i64 <<< [usize]);
-	
+
 	signed_to_signed!([i32] <<< isize);
 	signed_to_unsigned!([u32] <<< isize);
 

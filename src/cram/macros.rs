@@ -5,9 +5,9 @@ macro_rules! signed_to_signed {
 	    $( <<< [ $($Bigger: ident ),* ] )?
     ) => {
 	    $($(
-	        impl SqueezeInto<$Smaller> for $I {
+	        impl CramInto<$Smaller> for $I {
 		        #[inline(always)]
-		        fn squeeze_into(self) -> $Smaller {
+		        fn cram_into(self) -> $Smaller {
 			        if self < const { <$Smaller>::MIN as $I } {
 				        <$Smaller>::MIN
 			        } else if self > const { <$Smaller>::MAX as $I } {
@@ -18,11 +18,11 @@ macro_rules! signed_to_signed {
 		        }
 	        }
 	    )*)?
-	    
+
 	    $($(
-	        impl SqueezeInto<$Bigger> for $I {
+	        impl CramInto<$Bigger> for $I {
 		        #[inline(always)]
-		        fn squeeze_into(self) -> $Bigger { self as $Bigger }
+		        fn cram_into(self) -> $Bigger { self as $Bigger }
 	        }
 	    )*)?
     };
@@ -35,9 +35,9 @@ macro_rules! signed_to_unsigned {
 	    $( <<< [ $($Bigger: ident ),* ] )?
     ) => {
 	    $($(
-	        impl SqueezeInto<$Smaller> for $I {
+	        impl CramInto<$Smaller> for $I {
 		        #[inline(always)]
-		        fn squeeze_into(self) -> $Smaller {
+		        fn cram_into(self) -> $Smaller {
 			        if self < 0 {
 				        0
 			        } else if self > const { <$Smaller>::MAX as $I } {
@@ -48,11 +48,11 @@ macro_rules! signed_to_unsigned {
 		        }
 	        }
 	    )*)?
-	    
+
 	    $($(
-	        impl SqueezeInto<$Bigger> for $I {
+	        impl CramInto<$Bigger> for $I {
 		        #[inline(always)]
-		        fn squeeze_into(self) -> $Bigger { 
+		        fn cram_into(self) -> $Bigger {
 			        if self < 0 {
 				        0
 			        } else {
@@ -71,9 +71,9 @@ macro_rules! unsigned {
 	    $( <<< [ $($Bigger: ident ),* ] )?
     ) => {
 	    $($(
-	        impl SqueezeInto<$Smaller> for $I {
+	        impl CramInto<$Smaller> for $I {
 		        #[inline(always)]
-		        fn squeeze_into(self) -> $Smaller {
+		        fn cram_into(self) -> $Smaller {
 			        if self <= 0 {
 				        0
 			        } else if self > const { <$Smaller>::MAX as $I } {
@@ -84,18 +84,21 @@ macro_rules! unsigned {
 		        }
 	        }
 	    )*)?
-	    
+
 	    $($(
-	        impl SqueezeInto<$Bigger> for $I {
+	        impl CramInto<$Bigger> for $I {
 		        #[inline(always)]
-		        fn squeeze_into(self) -> $Bigger { self as $Bigger }
+		        fn cram_into(self) -> $Bigger { self as $Bigger }
 	        }
 	    )*)?
     };
 }
 
-macro_rules! impl_squeeze {
-    ($($I: ident),*) => { $(impl Squeeze for $I {})* };
+macro_rules! impl_cram {
+    ($($I: ident),*) => { $(impl Cram for $I {})* };
 }
 
-pub(crate) use {signed_to_signed, signed_to_unsigned, unsigned, impl_squeeze};
+pub(crate) use impl_cram;
+pub(crate) use signed_to_signed;
+pub(crate) use signed_to_unsigned;
+pub(crate) use unsigned;
