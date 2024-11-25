@@ -17,12 +17,48 @@ macro_rules! signed_to_signed {
 			        }
 		        }
 	        }
+
+	        impl CramInto<$Smaller> for &$I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Smaller {
+			        if *self < const { <$Smaller>::MIN as $I } {
+				        <$Smaller>::MIN
+			        } else if *self > const { <$Smaller>::MAX as $I } {
+				        <$Smaller>::MAX
+			        } else {
+				        *self as $Smaller
+			        }
+		        }
+	        }
+
+	        impl CramInto<$Smaller> for &mut $I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Smaller {
+			        if *self < const { <$Smaller>::MIN as $I } {
+				        <$Smaller>::MIN
+			        } else if *self > const { <$Smaller>::MAX as $I } {
+				        <$Smaller>::MAX
+			        } else {
+				        *self as $Smaller
+			        }
+		        }
+	        }
 	    )*)?
 
 	    $($(
 	        impl CramInto<$Bigger> for $I {
 		        #[inline(always)]
 		        fn cram_into(self) -> $Bigger { self as $Bigger }
+	        }
+
+	        impl CramInto<$Bigger> for &$I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Bigger { *self as $Bigger }
+	        }
+
+	        impl CramInto<$Bigger> for &mut $I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Bigger { *self as $Bigger }
 	        }
 	    )*)?
     };
@@ -47,6 +83,32 @@ macro_rules! signed_to_unsigned {
 			        }
 		        }
 	        }
+
+	        impl CramInto<$Smaller> for &$I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Smaller {
+			        if *self < 0 {
+				        0
+			        } else if *self > const { <$Smaller>::MAX as $I } {
+				        <$Smaller>::MAX
+			        } else {
+				        *self as $Smaller
+			        }
+		        }
+	        }
+
+	        impl CramInto<$Smaller> for &mut $I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Smaller {
+			        if *self < 0 {
+				        0
+			        } else if *self > const { <$Smaller>::MAX as $I } {
+				        <$Smaller>::MAX
+			        } else {
+				        *self as $Smaller
+			        }
+		        }
+	        }
 	    )*)?
 
 	    $($(
@@ -57,6 +119,28 @@ macro_rules! signed_to_unsigned {
 				        0
 			        } else {
 				        self as $Bigger
+			        }
+		        }
+	        }
+
+	        impl CramInto<$Bigger> for &$I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Bigger {
+			        if *self < 0 {
+				        0
+			        } else {
+				        *self as $Bigger
+			        }
+		        }
+	        }
+
+	        impl CramInto<$Bigger> for &mut $I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Bigger {
+			        if *self < 0 {
+				        0
+			        } else {
+				        *self as $Bigger
 			        }
 		        }
 	        }
@@ -83,12 +167,48 @@ macro_rules! unsigned {
 			        }
 		        }
 	        }
+
+	        impl CramInto<$Smaller> for &$I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Smaller {
+			        if *self <= 0 {
+				        0
+			        } else if *self > const { <$Smaller>::MAX as $I } {
+				        <$Smaller>::MAX
+			        } else {
+				        *self as $Smaller
+			        }
+		        }
+	        }
+
+	        impl CramInto<$Smaller> for &mut $I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Smaller {
+			        if *self <= 0 {
+				        0
+			        } else if *self > const { <$Smaller>::MAX as $I } {
+				        <$Smaller>::MAX
+			        } else {
+				        *self as $Smaller
+			        }
+		        }
+	        }
 	    )*)?
 
 	    $($(
 	        impl CramInto<$Bigger> for $I {
 		        #[inline(always)]
 		        fn cram_into(self) -> $Bigger { self as $Bigger }
+	        }
+
+	        impl CramInto<$Bigger> for &$I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Bigger { *self as $Bigger }
+	        }
+
+	        impl CramInto<$Bigger> for &mut $I {
+		        #[inline(always)]
+		        fn cram_into(self) -> $Bigger { *self as $Bigger }
 	        }
 	    )*)?
     };

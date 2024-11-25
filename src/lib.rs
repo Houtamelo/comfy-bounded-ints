@@ -1,5 +1,7 @@
 #![feature(macro_metavar_expr)]
 #![feature(macro_metavar_expr_concat)]
+#![feature(negative_impls)]
+#![feature(auto_traits)]
 #![allow(non_camel_case_types)]
 #![allow(clippy::derived_hash_with_manual_eq)]
 #![allow(clippy::derive_ord_xor_partial_ord)]
@@ -7,10 +9,18 @@
 
 mod bounded;
 mod cram;
+mod encapsulates_both;
 mod macros;
 mod saturated;
 
-mod encapsulates_both;
+pub auto trait IPrimitive {}
+impl<T: IPrimitive> IPrimitive for &T {}
+impl<T: IPrimitive> IPrimitive for &mut T {}
+
+pub auto trait INotRef {}
+impl<T> !INotRef for &T {}
+impl<T> !INotRef for &mut T {}
+
 #[cfg(test)] mod tests;
 
 #[allow(unused)]
@@ -49,6 +59,8 @@ pub mod prelude {
 			Sat_usize,
 		},
 	};
+	#[doc(hidden)]
+	pub use crate::IPrimitive;
 	#[doc(hidden)]
 	pub use crate::encapsulates_both::EncapsulatesBoth;
 	#[doc(hidden)]

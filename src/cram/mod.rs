@@ -7,16 +7,6 @@ pub trait CramInto<T> {
 	fn cram_into(self) -> T;
 }
 
-impl<A: Clone + CramInto<B>, B> CramInto<B> for &A {
-	#[inline(always)]
-	fn cram_into(self) -> B { self.clone().cram_into() }
-}
-
-impl<A: Clone + CramInto<B>, B> CramInto<B> for &mut A {
-	#[inline(always)]
-	fn cram_into(self) -> B { self.clone().cram_into() }
-}
-
 pub trait Cram: Sized {
 	#[inline(always)]
 	fn cram<T>(self) -> T
