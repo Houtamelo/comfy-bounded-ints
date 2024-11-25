@@ -63,15 +63,15 @@ fn test() {
 
 			let mut result = int;
 			result $Op val.clone();
-			assert_eq!(result.cram::<$T>(), $Expect);
+			assert_eq!(cram::<$T>(result), $Expect);
 
 			let mut result = int;
 			result $Op &val.clone();
-			assert_eq!(result.cram::<$T>(), $Expect);
+			assert_eq!(cram::<$T>(result), $Expect);
 
 			let mut result = int;
 			result $Op &mut val.clone();
-			assert_eq!(result.cram::<$T>(), $Expect);
+			assert_eq!(cram::<$T>(result), $Expect);
 
 			$(
 				let mut result = val.clone();

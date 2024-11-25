@@ -43,7 +43,7 @@ pub mod prelude {
 			Bnd_u128,
 			Bnd_usize,
 		},
-		cram::{Cram, CramFrom, CramInto},
+		cram::{CramFrom, CramInto, clamp, cram},
 		saturated::{
 			Sat_i8,
 			Sat_i16,

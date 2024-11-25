@@ -1,18 +1,23 @@
 use macros::*;
 mod macros;
 
+pub fn clamp<T: PartialOrd>(value: impl CramInto<T>, range: std::ops::Range<T>) -> T {
+	let value = value.cram_into();
+	if value < range.start {
+		range.start
+	} else if value > range.end {
+		range.end
+	} else {
+		value
+	}
+}
+
+pub fn cram<T>(value: impl CramInto<T>) -> T { value.cram_into() }
+
 #[doc(hidden)]
 pub trait CramInto<T> {
 	#[doc(hidden)]
 	fn cram_into(self) -> T;
-}
-
-pub trait Cram: Sized {
-	#[inline(always)]
-	fn cram<T>(self) -> T
-	where Self: CramInto<T> {
-		self.cram_into()
-	}
 }
 
 #[doc(hidden)]
@@ -26,10 +31,6 @@ where B: CramInto<A>
 	#[inline(always)]
 	fn cram_from(value: B) -> Self { value.cram_into() }
 }
-
-impl_cram!(
-	i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize
-);
 
 signed_to_signed!(i8 <<< [i8, i16, i32, i64, i128, isize]);
 signed_to_signed!([i8] <<< i16 <<< [i16, i32, i64, i128, isize]);

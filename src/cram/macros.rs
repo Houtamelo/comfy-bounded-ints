@@ -214,11 +214,6 @@ macro_rules! unsigned {
     };
 }
 
-macro_rules! impl_cram {
-    ($($I: ident),*) => { $(impl Cram for $I {})* };
-}
-
-pub(crate) use impl_cram;
 pub(crate) use signed_to_signed;
 pub(crate) use signed_to_unsigned;
 pub(crate) use unsigned;
