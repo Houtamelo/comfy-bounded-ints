@@ -90,8 +90,8 @@ macro_rules! impl_conversions {
 		}
 
 		impl<$( $($gen)* )?> !$crate::prelude::IPrimitive for $Int {}
-		impl<$( $($gen)* )?> !$crate::prelude::IPrimitive for &$Int {}
-		impl<$( $($gen)* )?> !$crate::prelude::IPrimitive for &mut $Int {}
+		//impl<$( $($gen)* )?> !$crate::prelude::IPrimitive for &$Int {}
+		//impl<$( $($gen)* )?> !$crate::prelude::IPrimitive for &mut $Int {}
 	};
 }
 
