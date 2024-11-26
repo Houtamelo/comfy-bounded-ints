@@ -11,15 +11,12 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.4.3(Unchained): added `clamp`, made the trait `Cram` into standalone function">
+    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cram/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cram/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cram/macros.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cram/macros.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/macros/basic_ops.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/basic_ops.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/macros/new_signed.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/new_signed.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/macros/new_unsigned.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/new_unsigned.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/macros/misc.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/misc.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,7 +27,7 @@
     <option name="myAddOrReplace" value="1" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="81595" />
+    <option name="totalTimeSeconds" value="81993" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
@@ -84,48 +81,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "Cargo.Expand comfy_bounded_ints::types::i8.executor": "Run",
-    "Cargo.Test ALL.executor": "Run",
-    "Cargo.Test cram::test.executor": "Run",
-    "Cargo.Test generics::test.executor": "Run",
-    "Cargo.Test lib::tests.executor": "Run",
-    "Cargo.Test macros::test.executor": "Run",
-    "Cargo.Test macros::tests::test.executor": "Run",
-    "Cargo.Test squeeze_to.executor": "Coverage",
-    "Cargo.Test squeeze_to::gen_i128::tests::test_squeeze_to_i128.executor": "Run",
-    "Cargo.Test sub_assign_pad::tests.executor": "Run",
-    "Cargo.Test test.executor": "Run",
-    "Cargo.Test tests::compiles.executor": "Run",
-    "Cargo.Test tests::test.executor": "Run",
-    "Cargo.Test types::i128::add_assign_self::test_add_assign.executor": "Run",
-    "Cargo.Test types::i128::add_assign_self::tests::test.executor": "Run",
-    "Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic.executor": "Run",
-    "Cargo.Test types::i8::test.executor": "Run",
-    "Cargo.Test types::i8::tests::test_serde.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i128.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i16.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i32.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i64.executor": "Run",
-    "Cargo.Test types::u128::sub_assign_pad::tests::test_i8.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.rust.reset.selective.auto.import": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "deletionFromPopupRequiresConfirmation": "false",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/home/houtamelo/Documents/projects/libraries/comfy_bounded_ints",
-    "org.rust.cargo.project.model.PROJECT_DISCOVERY": "true",
-    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "language.rust"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;Cargo.Expand comfy_bounded_ints::types::i8.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test ALL.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test cram::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test generics::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test lib::tests.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test macros::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test macros::tests::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test squeeze_to.executor&quot;: &quot;Coverage&quot;,
+    &quot;Cargo.Test squeeze_to::gen_i128::tests::test_squeeze_to_i128.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test sub_assign_pad::tests.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test tests::compiles.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test tests::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i128::add_assign_self::test_add_assign.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i128::add_assign_self::tests::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i8::div_assign_zero::div_assign_self::test_div_assign_panic.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i8::test.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::i8::tests::test_serde.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i128.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i16.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i32.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i64.executor&quot;: &quot;Run&quot;,
+    &quot;Cargo.Test types::u128::sub_assign_pad::tests::test_i8.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;deletionFromPopupRequiresConfirmation&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/houtamelo/Documents/projects/libraries/comfy_bounded_ints&quot;,
+    &quot;org.rust.cargo.project.model.PROJECT_DISCOVERY&quot;: &quot;true&quot;,
+    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;language.rust&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />
@@ -277,7 +274,8 @@
       <workItem from="1732570808068" duration="1950000" />
       <workItem from="1732573584117" duration="476000" />
       <workItem from="1732579530925" duration="1620000" />
-      <workItem from="1732590291721" duration="1278000" />
+      <workItem from="1732590291721" duration="1347000" />
+      <workItem from="1732593303809" duration="400000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.3.0: Unchained version">
       <option name="closed" value="true" />
@@ -319,7 +317,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732574036106</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums.">
+      <option name="closed" value="true" />
+      <created>1732591617978</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732591617978</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -346,7 +352,8 @@
     <MESSAGE value="Version 0.4.1(Unchained): Rework using negative impls." />
     <MESSAGE value="Version 0.4.2(Unchained): fixed issue with cross-crate auto trait impls" />
     <MESSAGE value="Version 0.4.3(Unchained): added `clamp`, made the trait `Cram` into standalone function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.3(Unchained): added `clamp`, made the trait `Cram` into standalone function" />
+    <MESSAGE value="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums." />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test ALL Coverage Results" MODIFIED="1704853407960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />

@@ -69,10 +69,6 @@ fn test() {
 			result $Op &val.clone();
 			assert_eq!(cram::<$T>(result), $Expect);
 
-			let mut result = int;
-			result $Op &mut val.clone();
-			assert_eq!(cram::<$T>(result), $Expect);
-
 			$(
 				let mut result = val.clone();
 				result $Op int;
@@ -112,10 +108,8 @@ fn compiles() {
 		    $(
 		        let _ = Int::from($Val);
 			    let _ = Int::from(&$Val);
-			    let _ = Int::from(&mut $Val);
 		        let _ = Int::cram_from($Val);
 		        let _ = Int::cram_from(&$Val);
-		        let _ = Int::cram_from(&mut $Val);
 		    )*
 
 	    };
@@ -144,10 +138,8 @@ fn compiles() {
 				$(
 					let _: $N = Int::new(5).into();
 					let _: $N = (&Int::new(5)).into();
-					let _: $N = (&mut Int::new(5)).into();
 					let _: $N = Int::new(5).cram_into();
 					let _: $N = (&Int::new(5)).cram_into();
-					let _: $N = (&mut Int::new(5)).cram_into();
 				)*
 			};
 		}
@@ -340,12 +332,6 @@ fn compiles() {
 				int *= &$Val;
 				int /= &$Val;
 				int %= &$Val;
-
-				int += &mut $Val;
-				int -= &mut $Val;
-				int *= &mut $Val;
-				int /= &mut $Val;
-				int %= &mut $Val;
 			)*
 		};
 	}
