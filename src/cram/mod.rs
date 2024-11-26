@@ -1,13 +1,59 @@
+use std::{collections::Bound, iter::Step, ops::RangeBounds};
+
 use macros::*;
 mod macros;
 
-pub fn clamp<T: PartialOrd>(value: impl CramInto<T>, range: std::ops::Range<T>) -> T {
-	let value = value.cram_into();
-	if value < range.start {
-		range.start
-	} else if value > range.end {
-		range.end
-	} else {
+pub trait ClampRange: Sized {
+	fn clamp_rg<R: CramInto<Self> + Copy>(
+		value: impl CramInto<Self>,
+		range: impl RangeBounds<R>,
+	) -> Self;
+}
+
+impl<T: Copy + PartialOrd + Step> ClampRange for T {
+	fn clamp_rg<R: CramInto<Self> + Copy>(
+		value: impl CramInto<Self>,
+		range: impl RangeBounds<R>,
+	) -> Self {
+		let value = value.cram_into();
+
+		match range.start_bound() {
+			Bound::Included(min) => {
+				let min = min.cram_into();
+				if value < min {
+					return min;
+				}
+			}
+			Bound::Excluded(min) => {
+				let min = min.cram_into();
+				let min = T::forward_checked(min, 1).unwrap_or(min);
+
+				if value < min {
+					return min;
+				}
+			}
+			Bound::Unbounded => {}
+		}
+
+		match range.end_bound() {
+			Bound::Included(max) => {
+				let max = max.cram_into();
+
+				if value > max {
+					return max;
+				}
+			}
+			Bound::Excluded(max) => {
+				let max = max.cram_into();
+				let max = T::backward_checked(max, 1).unwrap_or(max);
+
+				if value > max {
+					return max;
+				}
+			}
+			Bound::Unbounded => {}
+		}
+
 		value
 	}
 }

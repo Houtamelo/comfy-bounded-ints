@@ -2,6 +2,7 @@
 #![feature(macro_metavar_expr_concat)]
 #![feature(negative_impls)]
 #![feature(auto_traits)]
+#![feature(step_trait)]
 #![allow(non_camel_case_types)]
 #![allow(clippy::derived_hash_with_manual_eq)]
 #![allow(clippy::derive_ord_xor_partial_ord)]
@@ -43,7 +44,7 @@ pub mod prelude {
 			Bnd_u128,
 			Bnd_usize,
 		},
-		cram::{CramFrom, CramInto, clamp, cram},
+		cram::{ClampRange, CramFrom, CramInto, cram},
 		saturated::{
 			Sat_i8,
 			Sat_i16,
@@ -67,6 +68,8 @@ pub mod prelude {
 	pub use crate::{
 		impl_basic_ops,
 		impl_basic_ops_assign,
+		impl_basic_ops_self_generic,
+		impl_basic_ops_self_non_generic,
 		impl_cmp,
 		impl_conversions,
 		impl_deref,

@@ -36,6 +36,7 @@ macro_rules! new_bound_unsigned {
 			fn default() -> Self { Self::new(0) }
 		}
 
+		$crate::prelude::impl_basic_ops_self_non_generic!($Int[$N]);
 		$crate::prelude::impl_basic_ops!($Int[$N]);
 		$crate::prelude::impl_basic_ops_assign!($Int[$N]);
 		$crate::prelude::impl_conversions!($Int, $Int[$N]);
@@ -83,6 +84,7 @@ macro_rules! new_generic_bound_unsigned {
 		    }
 	    }
 
+	    $crate::prelude::impl_basic_ops_self_generic!($Int[$N]);
 	    $crate::prelude::impl_basic_ops!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
 	    $crate::prelude::impl_basic_ops_assign!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
 	    $crate::prelude::impl_conversions!($Int, $Int<$MIN, $MAX> [$N] [ const $MIN: $N, const $MAX: $N ]);
