@@ -1,5 +1,7 @@
 use crate::prelude::*;
 
+new_generic_bound_signed!(GenInt < MIN, MAX > (i32));
+
 #[test]
 fn test() {
 	#[allow(unused)]
@@ -34,30 +36,6 @@ fn test() {
 		    )*
 	    };
 
-		(@BIN $T: ty [$Op: tt] [$Val: expr] == $Expect: expr $(, $Inverse: expr)? ) => {
-			let val = <$T>::cram_from($Val);
-
-			let result = int $Op val.clone();
-			assert_eq!(result, $Expect);
-
-			let result = int $Op &val.clone();
-			assert_eq!(result, $Expect);
-
-			let result = int $Op &mut val.clone();
-			assert_eq!(result, $Expect);
-
-			$(
-				let result = val.clone() $Op int;
-				assert_eq!(result, $Inverse);
-
-				let result = val.clone() $Op &int;
-				assert_eq!(result, $Inverse);
-
-				let result = val.clone() $Op &mut int;
-				assert_eq!(result, $Inverse);
-			)?
-		};
-
 		(@ASG $T: ty [$Op: tt] [$Val: expr] == $Expect: expr $(, $Inverse: expr)? ) => {
 			let val = <$T>::cram_from($Val);
 
@@ -68,7 +46,6 @@ fn test() {
 			let mut result = int;
 			result $Op &val.clone();
 			assert_eq!(cram::<$T>(result), $Expect);
-
 			$(
 				let mut result = val.clone();
 				result $Op int;
@@ -95,9 +72,7 @@ fn test() {
 		};
 	}
 
-	test_primitives!(
-		i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize,
-	);
+	test_primitives!(i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize,);
 }
 
 //noinspection RsTraitObligations
@@ -144,10 +119,15 @@ fn compiles() {
 			};
 		}
 
-	into!(
-		i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize, Int, UInt
-	);
+	into!(i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize, Int, UInt);
 
+	let _: f32 = Int::new(5).into();
+	let _: f32 = (&Int::new(5)).into();
+	let _: f64 = Int::new(5).into();
+	let _: f64 = (&Int::new(5)).into();
+
+	#[allow(unused_mut)]
+	#[allow(unused_variables)]
 	let mut int = Int::new(5);
 
 	macro_rules! cmp {
@@ -314,6 +294,8 @@ fn compiles() {
 		3_u64,
 		3_u128,
 		3_usize,
+		3f32,
+		3f64,
 		Int::new(5),
 		UInt::new(5),
 	);
@@ -353,4 +335,25 @@ fn compiles() {
 		Int::new(5),
 		UInt::new(5),
 	);
+
+	macro_rules! assign_to_others {
+		($($T: ty),* $(,)?) => {
+			$(
+				let mut prim: $T = 5 as _;
+				prim += Int::new(5);
+				prim -= Int::new(5);
+				prim *= Int::new(5);
+				prim /= Int::new(5);
+				prim %= Int::new(5);
+
+				prim += &Int::new(5);
+				prim -= &Int::new(5);
+				prim *= &Int::new(5);
+				prim /= &Int::new(5);
+				prim %= &Int::new(5);
+			)*
+		};
+	}
+
+	assign_to_others!(i8, i16, i32, i64, i128, isize, u8, u16, u32, u64, u128, usize, f32, f64,);
 }

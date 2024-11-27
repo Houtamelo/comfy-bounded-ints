@@ -7,26 +7,26 @@ macro_rules! impl_conversions {
 	    [ $N: ty ]
 	    $( [$($gen:tt)*] )?
     ) => {
-		impl<T: ${concat(Not, $Ident)} + $crate::IPrimitive + $crate::prelude::EncapsulatesBoth<$N>, $( $($gen)* )?> $crate::prelude::EncapsulatesBoth<$Int> for T {
+		impl<T: ${concat(Not, $Ident)} + $crate::IPrimitive + $crate::EncapsulatesBoth<$N>, $( $($gen)* )?> $crate::EncapsulatesBoth<$Int> for T {
 			type Out = T::Out;
 		}
 
-		impl<T, $( $($gen)* )?> $crate::prelude::EncapsulatesBoth<T> for $Int
-			where $N: $crate::prelude::EncapsulatesBoth<T> {
-			type Out = <$N as $crate::prelude::EncapsulatesBoth<T>>::Out;
+		impl<T, $( $($gen)* )?> $crate::EncapsulatesBoth<T> for $Int
+			where $N: $crate::EncapsulatesBoth<T> {
+			type Out = <$N as $crate::EncapsulatesBoth<T>>::Out;
 		}
 
 		pub auto trait ${concat(Not, $Ident)} {}
 		impl<$( $($gen)* )?> !${concat(Not, $Ident)} for $Int {}
 
-		impl<T: $crate::prelude::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> From<$Int> for T {
+		impl<T: $crate::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> From<$Int> for T {
 			#[inline(always)]
 			fn from(value: $Int) -> Self {
 				Self::cram_from(value.get())
 			}
 		}
 
-		impl<T: $crate::prelude::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> From<&$Int> for T {
+		impl<T: $crate::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> From<&$Int> for T {
 			#[inline(always)]
 			fn from(value: &$Int) -> Self {
 				Self::cram_from(value.get())
@@ -47,14 +47,14 @@ macro_rules! impl_conversions {
 			}
 		}
 
-		impl<T: $crate::prelude::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> $crate::prelude::CramInto<T> for $Int {
+		impl<T: $crate::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> $crate::prelude::CramInto<T> for $Int {
 			#[inline(always)]
 			fn cram_into(self) -> T {
 				T::cram_from(self.get())
 			}
 		}
 
-		impl<T: $crate::prelude::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> $crate::prelude::CramInto<T> for &$Int {
+		impl<T: $crate::IPrimitive + $crate::prelude::CramFrom<$N>, $( $($gen)* )?> $crate::prelude::CramInto<T> for &$Int {
 			#[inline(always)]
 			fn cram_into(self) -> T {
 				T::cram_from(self.get())
@@ -68,7 +68,7 @@ macro_rules! impl_conversions {
 			}
 		}
 
-		impl<$( $($gen)* )?> !$crate::prelude::IPrimitive for $Int {}
+		impl<$( $($gen)* )?> !$crate::IPrimitive for $Int {}
 	};
 }
 

@@ -11,11 +11,18 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums.">
+    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.4.5(Unchained): fixed issue with mutable references being moved">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bounded.rs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cram/macros.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cram/macros.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cram/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cram/mod.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/macros/basic_ops.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/basic_ops.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/macros/cmp.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/cmp.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/macros/misc.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/misc.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/macros/new_signed.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/new_signed.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/macros/new_unsigned.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/new_unsigned.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/saturated.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/saturated.rs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +34,7 @@
     <option name="myAddOrReplace" value="1" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="81993" />
+    <option name="totalTimeSeconds" value="90587" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
@@ -275,7 +282,9 @@
       <workItem from="1732573584117" duration="476000" />
       <workItem from="1732579530925" duration="1620000" />
       <workItem from="1732590291721" duration="1347000" />
-      <workItem from="1732593303809" duration="400000" />
+      <workItem from="1732593303809" duration="592000" />
+      <workItem from="1732594793930" duration="3000" />
+      <workItem from="1732667764904" duration="9248000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.3.0: Unchained version">
       <option name="closed" value="true" />
@@ -325,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732591617978</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Version 0.4.5(Unchained): fixed issue with mutable references being moved">
+      <option name="closed" value="true" />
+      <created>1732593875154</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732593875154</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -353,7 +370,8 @@
     <MESSAGE value="Version 0.4.2(Unchained): fixed issue with cross-crate auto trait impls" />
     <MESSAGE value="Version 0.4.3(Unchained): added `clamp`, made the trait `Cram` into standalone function" />
     <MESSAGE value="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums." />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums." />
+    <MESSAGE value="Version 0.4.5(Unchained): fixed issue with mutable references being moved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.5(Unchained): fixed issue with mutable references being moved" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test ALL Coverage Results" MODIFIED="1704853407960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />

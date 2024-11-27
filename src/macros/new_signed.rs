@@ -36,14 +36,19 @@ macro_rules! new_bound_signed {
 			fn default() -> Self { Self::new(0) }
 		}
 
-		$crate::prelude::impl_basic_ops_self_non_generic!($Int[$N]);
-		$crate::prelude::impl_basic_ops!($Int[$N]);
-		$crate::prelude::impl_basic_ops_assign!($Int[$N]);
-		$crate::prelude::impl_neg!($Int[$N]);
-		$crate::prelude::impl_conversions!($Int, $Int[$N]);
-		$crate::prelude::impl_deref!($Int[$N]);
-		$crate::prelude::impl_cmp!($Int, $Int[$N]);
-		$crate::prelude::impl_display!($Int[$N]);
+		$crate::impl_basic_ops_self_non_generic!($Int[$N]);
+		$crate::impl_basic_ops_assign_self_non_generic!($Int[$N]);
+		$crate::impl_basic_ops!($Int[$N]);
+		$crate::impl_basic_ops_assign!($Int, $Int[$N]);
+		$crate::impl_neg!($Int[$N]);
+		$crate::impl_conversions!($Int, $Int[$N]);
+		$crate::impl_deref!($Int[$N]);
+		$crate::impl_display!($Int[$N]);
+		$crate::impl_cmp!($Int, $Int[$N]);
+		$crate::impl_float_cmp_eq!(f32, $Int, $Int[$N]);
+		$crate::impl_float_cmp_eq!(f64, $Int, $Int[$N]);
+		$crate::impl_float_cmp_ord!(f32, $Int, $Int[$N]);
+		$crate::impl_float_cmp_ord!(f64, $Int, $Int[$N]);
 	};
 }
 
@@ -85,13 +90,18 @@ macro_rules! new_generic_bound_signed {
 		    }
 	    }
 
-	    $crate::prelude::impl_basic_ops_self_generic!($Int[$N]);
-	    $crate::prelude::impl_basic_ops!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
-	    $crate::prelude::impl_basic_ops_assign!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
-	    $crate::prelude::impl_neg!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
-	    $crate::prelude::impl_conversions!($Int, $Int<$MIN, $MAX> [$N] [ const $MIN: $N, const $MAX: $N ]);
-	    $crate::prelude::impl_deref!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
-	    $crate::prelude::impl_cmp!($Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
-	    $crate::prelude::impl_display!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_basic_ops_self_generic!($Int[$N]);
+	    $crate::impl_basic_ops_assign_self_generic!($Int[$N]);
+	    $crate::impl_basic_ops!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_basic_ops_assign!($Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_neg!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_conversions!($Int, $Int<$MIN, $MAX> [$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_deref!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_display!($Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_cmp!($Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_float_cmp_eq!(f32, $Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_float_cmp_eq!(f64, $Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_float_cmp_ord!(f32, $Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
+	    $crate::impl_float_cmp_ord!(f64, $Int, $Int<$MIN, $MAX>[$N] [ const $MIN: $N, const $MAX: $N ]);
     };
 }
