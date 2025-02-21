@@ -11,19 +11,10 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.4.5(Unchained): fixed issue with mutable references being moved">
+    <list default="true" id="a34638b4-85e0-49b5-a44c-6cde19d254df" name="Changes" comment="Version 0.5.0(Unchained): Added support for some operations with floats">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/bounded.rs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cram/macros.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cram/macros.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cram/mod.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/cram/mod.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Cargo.toml" beforeDir="false" afterPath="$PROJECT_DIR$/Cargo.toml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/macros/basic_ops.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/basic_ops.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/macros/cmp.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/cmp.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/macros/misc.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/misc.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/macros/new_signed.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/new_signed.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/macros/new_unsigned.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/macros/new_unsigned.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/saturated.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/saturated.rs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests.rs" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests.rs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,7 +25,7 @@
     <option name="myAddOrReplace" value="1" />
   </component>
   <component name="DarkyenusTimeTracker">
-    <option name="totalTimeSeconds" value="90587" />
+    <option name="totalTimeSeconds" value="91375" />
     <option name="naggedAbout" value="1" />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="RsBuildProfile:test" />
@@ -284,7 +275,10 @@
       <workItem from="1732590291721" duration="1347000" />
       <workItem from="1732593303809" duration="592000" />
       <workItem from="1732594793930" duration="3000" />
-      <workItem from="1732667764904" duration="9248000" />
+      <workItem from="1732667764904" duration="9327000" />
+      <workItem from="1733621523657" duration="36000" />
+      <workItem from="1733622808900" duration="39000" />
+      <workItem from="1740165440436" duration="1818000" />
     </task>
     <task id="LOCAL-00001" summary="Version 0.3.0: Unchained version">
       <option name="closed" value="true" />
@@ -342,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732593875154</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Version 0.5.0(Unchained): Added support for some operations with floats">
+      <option name="closed" value="true" />
+      <created>1732677065087</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732677065087</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -357,6 +359,8 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial commit" />
     <MESSAGE value="Added compilation fail if MIN &gt; MAX" />
@@ -371,7 +375,9 @@
     <MESSAGE value="Version 0.4.3(Unchained): added `clamp`, made the trait `Cram` into standalone function" />
     <MESSAGE value="Version 0.4.4(Unchained):changed clamp to `clamp_rg`, added basic ops implementations with self. Added step implementation for nums." />
     <MESSAGE value="Version 0.4.5(Unchained): fixed issue with mutable references being moved" />
-    <option name="LAST_COMMIT_MESSAGE" value="Version 0.4.5(Unchained): fixed issue with mutable references being moved" />
+    <MESSAGE value="Version 0.5.0(Unchained): Added support for some operations with floats" />
+    <option name="LAST_COMMIT_MESSAGE" value="Version 0.5.0(Unchained): Added support for some operations with floats" />
+    <option name="NON_MODAL_COMMIT_POSTPONE_SLOW_CHECKS" value="false" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/comfy_bounded_ints$Test_squeeze_to.info" NAME="Test ALL Coverage Results" MODIFIED="1704853407960" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="RsCoverageRunner" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" CONTEXT_FILE_PATH="C:\Users\anton\Documents\Personal Projects\comfy-bounded-ints" />

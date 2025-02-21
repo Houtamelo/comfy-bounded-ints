@@ -143,14 +143,10 @@ macro_rules! impl_basic_ops_self_non_generic {
 		}
 
 		impl std::iter::Step for $Int {
-			fn steps_between(start: &Self, end: &Self) -> Option<usize> {
-				if start < end {
-					Some(
-						$crate::prelude::cram::<usize>(end) - $crate::prelude::cram::<usize>(start),
-					)
-				} else {
-					None
-				}
+			fn steps_between(start: &Self, end: &Self) -> (usize, Option<usize>) {
+				let start = $crate::prelude::cram::<$N>(start);
+				let end = $crate::prelude::cram::<$N>(end);
+				<$N as std::iter::Step>::steps_between(&start, &end)
 			}
 
 			fn forward_checked(mut start: Self, count: usize) -> Option<Self> {
@@ -448,14 +444,10 @@ macro_rules! impl_basic_ops_self_generic {
 
 		impl<const MIN: $N, const MAX: $N> std::iter::Step for $Int<MIN, MAX> {
 			#[inline(always)]
-			fn steps_between(start: &Self, end: &Self) -> Option<usize> {
-				if start < end {
-					Some(
-						$crate::prelude::cram::<usize>(end) - $crate::prelude::cram::<usize>(start),
-					)
-				} else {
-					None
-				}
+			fn steps_between(start: &Self, end: &Self) -> (usize, Option<usize>) {
+				let start = $crate::prelude::cram::<$N>(start);
+				let end = $crate::prelude::cram::<$N>(end);
+				<$N as std::iter::Step>::steps_between(&start, &end)
 			}
 
 			#[inline(always)]
