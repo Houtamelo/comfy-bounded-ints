@@ -3,143 +3,143 @@
 macro_rules! impl_basic_ops_self_non_generic {
     ($Int:ty[$N:ty]) => {
         impl std::ops::Add<$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn add(self, rhs: $Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()) }
+            fn add(self, rhs: $Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Add<$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn add(self, rhs: $Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()) }
+            fn add(self, rhs: $Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Add<&$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn add(self, rhs: &$Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()) }
+            fn add(self, rhs: &$Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Add<&$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn add(self, rhs: &$Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()) }
+            fn add(self, rhs: &$Int) -> Self::Output { <$N>::saturating_add(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Sub<$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn sub(self, rhs: $Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()) }
+            fn sub(self, rhs: $Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Sub<$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn sub(self, rhs: $Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()) }
+            fn sub(self, rhs: $Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Sub<&$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn sub(self, rhs: &$Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()) }
+            fn sub(self, rhs: &$Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Sub<&$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn sub(self, rhs: &$Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()) }
+            fn sub(self, rhs: &$Int) -> Self::Output { <$N>::saturating_sub(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Mul<$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn mul(self, rhs: $Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()) }
+            fn mul(self, rhs: $Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Mul<$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn mul(self, rhs: $Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()) }
+            fn mul(self, rhs: $Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Mul<&$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn mul(self, rhs: &$Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()) }
+            fn mul(self, rhs: &$Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Mul<&$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn mul(self, rhs: &$Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()) }
+            fn mul(self, rhs: &$Int) -> Self::Output { <$N>::saturating_mul(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Div<$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn div(self, rhs: $Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()) }
+            fn div(self, rhs: $Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Div<$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn div(self, rhs: $Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()) }
+            fn div(self, rhs: $Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Div<&$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn div(self, rhs: &$Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()) }
+            fn div(self, rhs: &$Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Div<&$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn div(self, rhs: &$Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()) }
+            fn div(self, rhs: &$Int) -> Self::Output { <$N>::saturating_div(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Rem<$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn rem(self, rhs: $Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()) }
+            fn rem(self, rhs: $Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Rem<$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn rem(self, rhs: $Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()) }
+            fn rem(self, rhs: $Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Rem<&$Int> for $Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn rem(self, rhs: &$Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()) }
+            fn rem(self, rhs: &$Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()).into() }
         }
 
         impl std::ops::Rem<&$Int> for &$Int {
-            type Output = $N;
+            type Output = $Int;
 
             #[inline(always)]
-            fn rem(self, rhs: &$Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()) }
+            fn rem(self, rhs: &$Int) -> Self::Output { <$N>::rem(self.get(), rhs.get()).into() }
         }
 
         impl std::iter::Step for $Int {
